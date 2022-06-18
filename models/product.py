@@ -2,8 +2,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker
 
-# engine = create_engine("postgresql://postgres:root@185.217.131.133:5432")
-engine = create_engine("sqlite:///app.db")
+engine = create_engine("postgresql://postgres:root@185.217.131.133:5432")
+# engine = create_engine("sqlite:///app.db")
 Base = declarative_base()
 
 class Product(Base):
