@@ -10,9 +10,9 @@ from states import Form, AdminForm
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = ''
+API_TOKEN = '5388725901:AAF0dpazNT0hjUoR3rY6V7eyOOEHAqkej5k'
 PHONE_NUM = r'^[\+][0-9]{3}[0-9]{3}[0-9]{6}$'
-CHANNEL_ID = 0
+CHANNEL_ID = -1001632256119
 
 bot = Bot(token=API_TOKEN)
 
