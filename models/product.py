@@ -22,7 +22,3 @@ Session = sessionmaker(bind=engine)
 
 # create a session
 session = Session()
-
-# product = Product(name="product3", cost="25 000")
-# product = session.add(product)
-# session.commit()
