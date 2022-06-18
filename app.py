@@ -25,7 +25,7 @@ dp = Dispatcher(bot, storage=storage)
 #  USER HANDLERS
 ##################
 
-@dp.message_handler(commands='start')
+@dp.message_handler()
 async def start_handler(message: types.Message):
     await Form.product.set()
     markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True, selective=True)
@@ -54,7 +54,7 @@ async def process_name(message: types.Message, state: FSMContext):
         "name" : message.text
     })
     await Form.phone_number.set()
-    markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True, selective=True)
+    markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True, selective=True, one_time_keyboard=True)
     markup.add(types.KeyboardButton(text="Telefon raqam yuborish", request_contact=True))
     await message.answer("Telefon raqamingizni kiriting!", reply_markup=markup)
 
